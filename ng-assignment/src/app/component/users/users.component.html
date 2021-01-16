@@ -1,0 +1,27 @@
+<table class="table" *ngIf="users.length>0; else noUser">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Username</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{user.name}}</td>
+            <td>{{user.username}}</td>
+            <td appHighlighter>{{user.email}}</td>
+        </tr>
+    </tbody>
+    
+</table>
+
+<ng-template #noUser>
+    <div>
+        <p>No users available !!</p>
+    </div>
+</ng-template>
+
+
+
+
